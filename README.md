@@ -14,7 +14,7 @@ from the DavMail site is a good starting point.
       -p 1110:1110 -p 1025:1025 -v ~/.davmail:/etc/davmail kayvan/davmail
 
 The ports above correspond with the `Listener ports` in the `davmail.properties`
-file.
+file. The file `run.sh` here contains the above command.
 
 Connect with the container using the IP address of the docker host.
 
