@@ -13,6 +13,12 @@ from the DavMail site is a good starting point.
     docker run -d -p 1080:1080 -p 1143:1143 -p 1389:1389 \
       -p 1110:1110 -p 1025:1025 -v ~/.davmail:/etc/davmail kayvan/davmail
 
+Alternatively, you can use the runner script from here:
+
+    curl -s https://raw.githubusercontent.com/ksylvan/docker-davmail/master/run.sh > davmail.sh
+    chmod +x davmail.sh
+    ./davmail.sh start
+
 The ports above correspond with the `Listener ports` in the `davmail.properties`
 file. The file `run.sh` here contains the above command.
 
