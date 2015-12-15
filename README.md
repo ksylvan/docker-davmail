@@ -20,7 +20,7 @@ Alternatively, you can use the runner script from here:
     ./davmail.sh start
 
 The ports above correspond with the `Listener ports` in the `davmail.properties`
-file. The file `run.sh` here contains the above command.
+file.
 
 Connect with the container using the IP address of the docker host.
 
