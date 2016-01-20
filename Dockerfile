@@ -10,7 +10,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* /var/cache/apt/* /tmp/* /var/tmp/*
 
 RUN mkdir /opt/davmail && \
-    wget -q -O - http://downloads.sourceforge.net/project/davmail/davmail/4.7.0/davmail-linux-x86_64-4.7.0-2408.tgz | \
+    wget -q -O - http://downloads.sourceforge.net/project/davmail/davmail/4.7.1/davmail-linux-x86_64-4.7.1-2416.tgz | \
     tar -C /opt/davmail --strip-components=1 -xvz
 
 EXPOSE 1080
