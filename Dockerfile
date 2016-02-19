@@ -1,17 +1,14 @@
 # DavMail service
 
-FROM ubuntu:12.04
+# See https://github.com/iron-io/dockers/tree/master/java/java-1.8
+FROM iron/java:1.8
 
 MAINTAINER Kayvan Sylvan <kayvansylvan@gmail.com>
 
-RUN apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y default-jre wget && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /var/cache/apt/* /tmp/* /var/tmp/*
-
-RUN mkdir /opt/davmail && \
+RUN mkdir -p /opt/davmail && \
     wget -q -O - http://downloads.sourceforge.net/project/davmail/davmail/4.7.1/davmail-linux-x86_64-4.7.1-2416.tgz | \
-    tar -C /opt/davmail --strip-components=1 -xvz
+    tar -C /opt/davmail -xvz
+RUN mv /opt/davmail/davmail-linux-x86_64-4.7.1-2416/* /opt/davmail && rmdir /opt/davmail/davmail-linux-x86_64-4.7.1-2416
 
 EXPOSE 1080
 EXPOSE 1143
