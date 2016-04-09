@@ -6,9 +6,9 @@ FROM iron/java:1.8
 MAINTAINER Kayvan Sylvan <kayvansylvan@gmail.com>
 
 RUN mkdir -p /opt/davmail && \
-    wget -q -O - http://downloads.sourceforge.net/project/davmail/davmail/4.7.1/davmail-linux-x86_64-4.7.1-2416.tgz | \
+    wget -q -O - http://downloads.sourceforge.net/project/davmail/davmail/4.7.2/davmail-linux-x86_64-4.7.2-2427.tgz | \
     tar -C /opt/davmail -xvz
-RUN mv /opt/davmail/davmail-linux-x86_64-4.7.1-2416/* /opt/davmail && rmdir /opt/davmail/davmail-linux-x86_64-4.7.1-2416
+RUN mv /opt/davmail/davmail-linux-x86_64-4.7.2-2427/* /opt/davmail && rmdir /opt/davmail/davmail-linux-x86_64-4.7.2-2427
 
 EXPOSE 1080
 EXPOSE 1143
